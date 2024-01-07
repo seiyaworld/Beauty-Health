@@ -1,5 +1,11 @@
 # README
 
+
+main: Based Application & Some Setting.
+develop: Created Application & Added Setting.
+1_user_devise: Install devise for User
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
