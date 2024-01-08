@@ -25,6 +25,7 @@
             <li class="nav-item"><%= link_to "About", about_path,class: "nav-link text-dark" %></li>
             <li class="nav-item"><%= link_to "MyPage", user_path(current_user.id),class: "nav-link text-dark" %></li>
             <li class="nav-item"><%= link_to "Users", users_path,class: "nav-link text-dark" %></li>
+            <li class="nav-item"><%= link_to "Posts", posts_path,class: "nav-link text-dark" %></li>
             <li class="nav-item"><%= link_to "LogOut", destroy_user_session_path, method: :delete,class: "nav-link text-dark" %></li>
           <% else %>
             <li class="nav-item"><%= link_to "Home", root_path,class: "nav-link text-dark" %></li>
@@ -36,6 +37,7 @@
         </div>
       </nav>
     </header>
+    <%= notice %>
     <main class="m-5">
       <div class="container">
         <div class="row">

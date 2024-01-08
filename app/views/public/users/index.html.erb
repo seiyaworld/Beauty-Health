@@ -4,9 +4,12 @@
 
 <div class="col-3">
   <%= render "info", user: @user %>
+  <%= render "public/posts/newpost", new_post: @new_post %>
 </div>
 
 <div class="col-9">
+  <h2>ユーザー一覧</h2>
+  <%= render 'public/posts/error', new_post: @new_post %>
   <table class="table">
     <thead>
       <tr>
