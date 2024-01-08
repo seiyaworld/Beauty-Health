@@ -6,6 +6,8 @@ develop: Created Application & Added Setting.<br>
 1_user_devise: Install devise for User.<br>
 2_user_information: Created function of User.<br>
 3_post_function: Created function of Post.<br>
+4_favorite_comment: Created function of Favorite&Comment<br>
+
 
 
 

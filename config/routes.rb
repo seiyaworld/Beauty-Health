@@ -9,14 +9,11 @@ Rails.application.routes.draw do
     root to: 'homes#top'
     get 'about' => 'homes#about'
     resources :users
-    resources :posts
+    resources :posts do
+      resources :comments, only: [:create, :destroy]
+      resource :favorite, only: [:create, :destroy]
+    end
   end
-  
-  
-  
-  
-  
-  
-  
+
   
 end
