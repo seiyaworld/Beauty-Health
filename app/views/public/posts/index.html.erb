@@ -1,15 +1,16 @@
-<div class="col-3">
+<div class="col-lg-3">
   <%= render "public/users/info", user: current_user %>
   <%= render "newpost", new_post: @new_post %>
 </div>
 
-<div class="col-9">
+<div class="col-lg-9">
   <%= render 'error', new_post: @new_post %>
   <h2>投稿一覧</h2>
-  <table class="table">
+  <table class="table table-responsive">
     <thead>
       <tr>
         <th></th>
+        <th>投稿者</th>
         <th>Title</th>
         <th>Text</th>
         <th>♥</th>

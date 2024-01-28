@@ -4,6 +4,7 @@
       <%= image_tag post.get_post_image(50,50) %>
     <% end %>
   </td>
+  <td><%= post.user.name %></td>
   <td><%= post.title %></td>
   <td><%= post.body %></td>
   <td class="favorite_btn_<%= post.id %>"><%= render 'favorite', post: post %></td>

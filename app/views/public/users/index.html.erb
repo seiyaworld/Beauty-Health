@@ -10,25 +10,6 @@
 <div class="col-9">
   <h2>ユーザー一覧</h2>
   <%= render 'public/posts/error', new_post: @new_post %>
-  <table class="table">
-    <thead>
-      <tr>
-        <th></th>
-        <th>名前</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @users.each do |user|  %>
-        <tr>
-          <td>
-            <%= link_to user_path(user.id) do %>
-              <%= image_tag user.get_profile_image(50,50) %>
-            <% end %>
-          </td>
-          <td><%= user.name %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <%= render 'userlist', users: @users %>
 </div>
 

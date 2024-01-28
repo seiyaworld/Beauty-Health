@@ -38,22 +38,30 @@
       </nav>
     </header>
     <%= notice %>
-    <main class="m-5">
+    <% if user_signed_in? %>
+	  <div class="ml-5">
+		  <%= form_with url: search_path, local: true, method: :get do |f| %>
+			  <%= f.text_field :word %>
+			  <%= f.select :object, options_for_select([['User'],['Post']]) %>
+			  <%= f.select :search, options_for_select([['完全一致','perfect'],['前方一致','forward'],['後方一致','backward'],['部分一致','partial']]) %>
+			  <%= f.submit "検索" %>
+		  <% end %>
+	  </div>
+    <% end %>
+    <main class="h-100 m-5">
       <div class="container">
         <div class="row">
           <%= yield %>
         </div>
       </div>
     </main>
-    <footer class="bg-dark text-white mt-3 pt-2 pb-2">
+    <footer class="bg-dark text-white">
       <div class="container">
-        <div class="row no-gutters">
+        <div class="row no-gutters d-flex align-items-center">
           <div class="col-md-4">
-            <p>美しさと健康の果てを求めるSNS</p>
+            <div>美しさと健康の果てを求めるSNS</div>
           </div>
           <div class="col-md-8">
-            <div>○○</div>
-            <div>○○</div>
             <div>○○</div>
           </div>
         </div>

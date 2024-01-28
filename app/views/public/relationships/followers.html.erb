@@ -1,0 +1,12 @@
+<div class="col-3">
+  <%= render "public/users/info", user: current_user %>
+  <%= render "public/posts/newpost", new_post: Post.new %>
+</div>
+<div class="col-9">
+  <h2>Follower Users</h2>
+  <% if @users.exists? %>
+  	<%= render "public/users/userlist", users: @users %>
+  <% else %>
+  	<p>ユーザーはいません</p>
+  <% end %>
+</div>

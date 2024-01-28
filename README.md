@@ -7,6 +7,7 @@ develop: Created Application & Added Setting.<br>
 2_user_information: Created function of User.<br>
 3_post_function: Created function of Post.<br>
 4_favorite_comment: Created function of Favorite&Comment<br>
+5_follow_search: Created function of Follow&Search<br>
 
 
 
